@@ -21,6 +21,6 @@ fun <T> time(function: () -> T): TimedResult<T> {
 
 fun <T> outputResult(day: Int, part: Int, timedResult: TimedResult<T>) {
     timedResult.also {
-        System.out.println("Day $day Part $part Time: ${it.duration.toMillis()} ms \tResult: ${it.result}")
+        println("Day $day Part $part Time: ${it.duration.toMillis()} ms \tResult: ${it.result}")
     }
 }

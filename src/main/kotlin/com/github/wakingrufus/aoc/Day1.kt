@@ -28,6 +28,6 @@ class Day1 : AocDay<Int>(1) {
 
     override fun part2(input: List<String>): Int {
         val elves = processElves(input)
-        return elves.map { it.foodItems.sum() }.sortedDescending().take(3).sum()
+        return elves.map { it.foodItems.sum() }.sorted().takeLast(3).sum()
     }
 }

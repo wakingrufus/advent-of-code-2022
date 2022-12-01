@@ -7,7 +7,7 @@ abstract class AocDay<O>(val day: Int): AocProblem<O>, LoggingContext<AocDay<O>>
     override fun processInput(): List<String> {
         return inputFileToLines("input-day$day.txt")
             .map {
-                log.info(it)
+        //        log.debug(it)
                 it
             }
     }

@@ -5,8 +5,24 @@ import org.junit.jupiter.api.Test
 
 internal class Day1Test {
     @Test
-    fun `test sample1`() {
-        testPart1(name = "sample 1", input = listOf("test"), expected = "expected")
+    fun `test part1`() {
+        val input = """1000
+2000
+3000
+
+4000
+
+5000
+6000
+
+7000
+8000
+9000
+
+10000""".lines()
+        assertThat(Day1().part1(input))
+            .`as`("question example")
+            .isEqualTo(24_000)
     }
 
     @Test
@@ -14,9 +30,25 @@ internal class Day1Test {
         Day1().processInput()
     }
 
-    private fun testPart1(name: String, input: List<String>, expected: String) {
-        assertThat(Day1().part1(input))
-            .`as`(name)
-            .isEqualTo(expected)
+    @Test
+    fun `test part2`() {
+        val input = """1000
+2000
+3000
+
+4000
+
+5000
+6000
+
+7000
+8000
+9000
+
+10000""".lines()
+        assertThat(Day1().part2(input))
+            .`as`("question example")
+            .isEqualTo(45_000)
     }
+
 }

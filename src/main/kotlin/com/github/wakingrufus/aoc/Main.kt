@@ -1,5 +1,7 @@
 package com.github.wakingrufus.aoc
 
+import com.github.wakingrufus.aoc.day1.Day1
+import com.github.wakingrufus.aoc.day2.Day2
 import com.github.wakingrufus.util.outputResult
 import com.github.wakingrufus.util.time
 

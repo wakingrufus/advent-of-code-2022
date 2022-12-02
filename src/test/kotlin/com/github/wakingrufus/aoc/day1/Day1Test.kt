@@ -1,4 +1,4 @@
-package com.github.wakingrufus.aoc
+package com.github.wakingrufus.aoc.day1
 
 import org.assertj.core.api.Assertions.assertThat
 import org.junit.jupiter.api.Test

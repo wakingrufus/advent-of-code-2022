@@ -39,13 +39,13 @@ class Day5 : AocDay<String>(5) {
 data class Instruction(val from: Int, val to: Int, val quantity: Int)
 
 fun processInput(input: List<String>): Pair<List<Deque<Char>>, List<Instruction>> {
-    val stacks = mutableMapOf<Int, MutableList<Char>>()
+    val stacks = mutableMapOf<Int, Deque<Char>>()
     val instructions = mutableListOf<Instruction>()
     input.forEach { inputLine ->
         if (inputLine.contains("[")) {
             inputLine.indices.forEach {
                 if (inputLine[it] == '[') {
-                    stacks.computeIfAbsent((it / 4) + 1) { mutableListOf() }.add(inputLine[it + 1])
+                    stacks.computeIfAbsent((it / 4) + 1) { ArrayDeque() }.addLast(inputLine[it + 1])
                 }
             }
         } else if (inputLine.startsWith("move")) {
@@ -53,6 +53,5 @@ fun processInput(input: List<String>): Pair<List<Deque<Char>>, List<Instruction>
             instructions.add(Instruction(from = tokens[3].toInt(), tokens[5].toInt(), tokens[1].toInt()))
         }
     }
-    return stacks.keys.sorted()
-        .map { ArrayDeque(stacks[it]) } to instructions
+    return stacks.keys.sorted().map { stacks[it]!! } to instructions
 }

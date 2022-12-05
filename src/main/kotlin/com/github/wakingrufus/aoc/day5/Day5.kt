@@ -13,7 +13,7 @@ class Day5 : AocDay<String>(5) {
                 )
             }
         }
-        return state.map { it.pop() }.joinToString("")
+        return state.map { it.first }.joinToString("")
     }
 
     override fun part2(input: List<String>): String {
@@ -31,7 +31,7 @@ class Day5 : AocDay<String>(5) {
                 )
             }
         }
-        return state.map { it.pop() }.joinToString("")
+        return state.map { it.first }.joinToString("")
     }
 
 }

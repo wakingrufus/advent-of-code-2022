@@ -4,7 +4,7 @@ import com.github.wakingrufus.util.LoggingContext
 import com.github.wakingrufus.util.inputFileToLines
 
 abstract class AocDay<O>(val day: Int): AocProblem<O>, LoggingContext<AocDay<O>>{
-    override fun processInput(): List<String> {
+    override fun readInput(): List<String> {
         return inputFileToLines("input-day$day.txt")
             .map {
         //        log.debug(it)

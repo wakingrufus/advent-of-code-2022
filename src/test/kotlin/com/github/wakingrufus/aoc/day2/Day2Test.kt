@@ -15,11 +15,6 @@ C Z""".lines()
     }
 
     @Test
-    fun `test processInput`() {
-        Day2().processInput()
-    }
-
-    @Test
     fun `test part2`() {
         val input = """A Y
 B X

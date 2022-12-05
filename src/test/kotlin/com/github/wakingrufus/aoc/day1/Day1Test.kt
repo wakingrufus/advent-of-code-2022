@@ -26,11 +26,6 @@ internal class Day1Test {
     }
 
     @Test
-    fun `test processInput`() {
-        Day1().processInput()
-    }
-
-    @Test
     fun `test part2`() {
         val input = """1000
 2000

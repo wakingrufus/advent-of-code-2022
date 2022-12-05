@@ -19,11 +19,6 @@ CrZsJsPPZsGzwwsLwLmpwMDw""".lines()
     }
 
     @Test
-    fun `test processInput`() {
-        Day3().processInput()
-    }
-
-    @Test
     fun `test part2`() {
         val input = """vJrwpWtwJgWrhcsFMMfFFhFp
 jqHRNqRjqzjGDLGLrsFMfFZSrLrFZsSL

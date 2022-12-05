@@ -19,11 +19,6 @@ internal class Day4Test : LoggingContext<Day4Test> {
     }
 
     @Test
-    fun `test processInput`() {
-        Day4().processInput()
-    }
-
-    @Test
     fun `test part2`() {
         val input = """2-4,6-8
 2-3,4-5

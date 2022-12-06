@@ -1,10 +1,9 @@
 package com.github.wakingrufus.aoc.day3
 
-import com.github.wakingrufus.util.LoggingContext
 import org.assertj.core.api.Assertions.assertThat
 import org.junit.jupiter.api.Test
 
-internal class Day3Test : LoggingContext<Day3Test> {
+internal class Day3Test {
     @Test
     fun `test part1`() {
         val input = """vJrwpWtwJgWrhcsFMMfFFhFp

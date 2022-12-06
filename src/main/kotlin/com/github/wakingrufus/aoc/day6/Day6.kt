@@ -24,5 +24,4 @@ class Day6 : AocDay<Int>(6) {
     override fun part2(input: List<String>): Int {
         return findMarker(input.first(), 14)
     }
-
 }

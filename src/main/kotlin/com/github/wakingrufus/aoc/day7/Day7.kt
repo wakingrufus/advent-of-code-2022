@@ -2,7 +2,7 @@ package com.github.wakingrufus.aoc.day7
 
 import com.github.wakingrufus.aoc.AocDay
 
-class Day7 : AocDay<Int>(7) {
+class Day7 : AocDay<Int, Int>(7) {
     override fun part1(input: List<String>): Int {
         val fs = buildFilesystem(input)
         return fs.root.findAllDirs()

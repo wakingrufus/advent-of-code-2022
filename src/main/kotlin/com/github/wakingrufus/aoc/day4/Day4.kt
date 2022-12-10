@@ -2,7 +2,7 @@ package com.github.wakingrufus.aoc.day4
 
 import com.github.wakingrufus.aoc.AocDay
 
-class Day4 : AocDay<Int>(4) {
+class Day4 : AocDay<Int, Int>(4) {
     override fun part1(input: List<String>): Int {
         return input.count { fullyContains(it) }
     }

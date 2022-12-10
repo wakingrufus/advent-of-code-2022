@@ -2,7 +2,7 @@ package com.github.wakingrufus.aoc.day2
 
 import com.github.wakingrufus.aoc.AocDay
 
-class Day2 : AocDay<Int>(2) {
+class Day2 : AocDay<Int, Int>(2) {
     override fun part1(input: List<String>): Int {
         val rounds = input.map {
             Shape.fromLetter(it[0]) to Shape.fromLetter(it[2])

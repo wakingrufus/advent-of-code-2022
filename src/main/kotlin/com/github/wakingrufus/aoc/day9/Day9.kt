@@ -4,7 +4,7 @@ import com.github.wakingrufus.aoc.AocDay
 import kotlin.math.abs
 import kotlin.math.sign
 
-class Day9 : AocDay<Int>(9) {
+class Day9 : AocDay<Int, Int>(9) {
     override fun part1(input: List<String>): Int {
         val vistedLocations = mutableSetOf<Location>()
         var hLocation = Location(0, 0)

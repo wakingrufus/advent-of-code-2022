@@ -2,7 +2,7 @@ package com.github.wakingrufus.aoc.day8
 
 import com.github.wakingrufus.aoc.AocDay
 
-class Day8 : AocDay<Int>(8) {
+class Day8 : AocDay<Int, Int>(8) {
     override fun part1(input: List<String>): Int {
         val grid = input.map {
             it.toCharArray().map { it.digitToInt() }

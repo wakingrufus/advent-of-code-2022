@@ -3,7 +3,7 @@ package com.github.wakingrufus.aoc.day5
 import com.github.wakingrufus.aoc.AocDay
 import java.util.*
 
-class Day5 : AocDay<String>(5) {
+class Day5 : AocDay<String, String>(5) {
     override fun part1(input: List<String>): String {
         val (state, instructions) = processInput(input)
         instructions.forEach { instruction ->

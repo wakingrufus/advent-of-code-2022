@@ -2,7 +2,7 @@ package com.github.wakingrufus.aoc.day1
 
 import com.github.wakingrufus.aoc.AocDay
 
-class Day1 : AocDay<Int>(1) {
+class Day1 : AocDay<Int, Int>(1) {
     override fun part1(input: List<String>): Int {
         val elves = processElves(input)
         return elves.maxOf { it.foodItems.sum() }

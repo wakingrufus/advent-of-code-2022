@@ -2,7 +2,7 @@ package com.github.wakingrufus.aoc.day3
 
 import com.github.wakingrufus.aoc.AocDay
 
-class Day3 : AocDay<Int>(3) {
+class Day3 : AocDay<Int, Int>(3) {
     val charString = "0abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
     override fun part1(input: List<String>): Int {
         return input.map { findCommonItem(it) }.sumOf { charString.indexOf(it) }

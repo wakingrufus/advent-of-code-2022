@@ -2,7 +2,7 @@ package com.github.wakingrufus.aoc.day6
 
 import com.github.wakingrufus.aoc.AocDay
 
-class Day6 : AocDay<Int>(6) {
+class Day6 : AocDay<Int, Int>(6) {
     override fun part1(input: List<String>): Int {
         return findMarker(input.first(), 4)
     }

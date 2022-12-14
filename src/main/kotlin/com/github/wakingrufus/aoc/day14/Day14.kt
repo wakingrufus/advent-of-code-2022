@@ -12,15 +12,15 @@ class Day14 : AocDay<Int, Int>(14) {
         val sand = mutableSetOf<Pair<Int, Int>>()
         var currentGrain: Pair<Int, Int>? = 500 to 0
         while (currentGrain != null) {
-            if (rocks.none { it.first == currentGrain!!.first && it.second > currentGrain!!.second }
+            currentGrain = if (rocks.none { it.first == currentGrain!!.first && it.second > currentGrain!!.second }
                 && sand.none { it.first == currentGrain!!.first && it.second > currentGrain!!.second }) {
-                currentGrain = null
+                null
             } else {
                 val downSpot = currentGrain.copy(second = currentGrain.second + 1)
                 val leftSpot = currentGrain.copy(second = currentGrain.second + 1, first = currentGrain.first - 1)
                 val rightSpot = currentGrain.copy(second = currentGrain.second + 1, first = currentGrain.first + 1)
                 val newSpot = listOf(downSpot, leftSpot, rightSpot).firstOrNull { !rocks.contains(it) && !sand.contains(it) } ?: currentGrain
-                currentGrain = if (currentGrain == newSpot) {
+                if (currentGrain == newSpot) {
                     sand.add(currentGrain)
                     500 to 0
                 } else {
@@ -41,7 +41,7 @@ class Day14 : AocDay<Int, Int>(14) {
             nextSand = nextSand
                 .flatMap { it.spread() }
                 .toSet()
-                .filter { !rocks.contains(it) && !sand.contains(it) && it.second < bottom }
+                .filter { !rocks.contains(it) && it.second < bottom }
         }
         return sand.size
     }
